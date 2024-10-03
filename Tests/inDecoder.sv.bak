@@ -1,0 +1,6 @@
+module inDecoder (input logic [3: 0] d, output logic [1: 0] x);
+	
+	assign x[0] = d[3] & d[0] & ~(d[2] ^ d[1]);
+	assign x[1] = d[3] & d[2] & ~d[0];
+	
+endmodule

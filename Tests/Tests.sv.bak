@@ -1,0 +1,12 @@
+module Test(input logic [3: 0] d, input logic [1: 0]b, output logic [6: 0] res);
+
+	logic [1: 0] a, y;
+	
+	inDecoder in (d, a);
+	
+	sumDecoder sum (a, b, y);
+	
+	sevenseg seg (y, res);
+	
+endmodule
+		
